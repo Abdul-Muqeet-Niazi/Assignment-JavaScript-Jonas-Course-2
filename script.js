@@ -135,4 +135,84 @@ const winner = checkWinner(avgDolphins , avgKoalas);
 // Functions in JavaScript belong to the ‘object’ data type.
 
 // This all definition belongs to Const.
+// We use array to store more values rather than making as variable for every one just like that ↙
+const friend1 = 'Khalid bin Waleed';
+const friend2 = 'Salah Uddin Ayubi';
 
+// Now for this purpose we use Array :
+const friends = ['Khalid bin Waleed' , 'Salah Uddin Ayubi' , 'Momin']; // Index starts from 0 & length starts from 1.
+console.log(friends);
+console.log(friends[0]);
+console.log(friends[1]);
+console.log(friends[2]); // OR  console.log(friends(friends.length - 1));
+
+friends[0] = 'Aqib'; // Now you might thinking that const cant be changed but how thats possible, My friend it can be 
+//changed as primitive bcz values is string, but you cant change the whole array just like next example on next line ↓;
+// friends = ["anyone", "somebody"];  For check this example uncomment it!
+
+console.log(friends);
+
+// You can also write array in another array, and do operation(only expression operation not statement operation like if/else etc):
+const arr = ['someone' , 'no-one' , 200-131 , Array = [5646, 5979], 'kick-start'];
+console.log(arr);
+
+// Using a variable into an array:
+const firstName = "Abdul Muqeet";
+const array = [firstName , "Creative" , "Hard-Worker" , "Need-Worker"];
+console.log(array.length); // Defines length
+console.log(array[array.length - 1]); // define "Need-Worker"
+console.log(array);
+
+// Basic Array Operation Method :
+
+// Adding :
+// Push: It adds the element in the end !
+const friendz = ['Michael' , 'John' , 'Smith'];
+friendz.push('Fernandez');
+console.log(friendz);
+
+// Unshift: It adds the elements from the start !
+friendz.unshift('Jacqueline');
+console.log(friendz);
+
+// Removing:
+// Pop: Removing end of the element !
+friendz.pop(); //  Remove Fernandez.
+const popped = friendz.pop(); //  Remove Smith.
+console.log(popped); // Showing the remove of last element stored in popped.
+console.log(friendz);
+
+// Shift : Removing start of the element !
+friendz.shift();
+console.log(friendz); // Remove Jacqueline.
+
+// indexof : showing index of an element !
+const index = friendz.indexOf('John'); // Returns value 1 bcz it is placed on index of 1
+const index2 = friendz.indexOf('Smith'); // Returns as value -1 which means false as indeed we have no index of Smith as it removes by pop.
+console.log(index); 
+console.log(index2);
+
+// includes : Showing boolean values(True and False) as it available or not : (Release in ES6)
+const index3 = friendz.includes("John"); // return true, bcz it is available in array.
+const index4 = friendz.includes("Fernandez"); // return False, bcz it is not available in array.
+console.log(index3);
+console.log(index4);
+const num = [23];
+const index5 = num.includes("23"); // return False, bcz it uses strict equality and does not do type coercion where 23 is string 😉.
+console.log(index5);
+
+// Coding Challenge No. 2
+
+function calcTip(billvalue) {
+    if (billvalue >= 50 && billvalue <= 300) {
+        return billvalue * 0.15;
+    } else {
+        return billvalue * 0.2;
+    }
+}
+
+const billvalue = [ 125 , 555 , 44 ,];
+const tip = [calcTip(billvalue[0]) , calcTip(billvalue[1]) , calcTip(billvalue[2])];
+const total_Bill_Value_With_Tip = [billvalue[0] + tip[0] , billvalue[1] + tip[1] , billvalue[2] + tip[2]];
+console.log(billvalue , tip);
+console.log(total_Bill_Value_With_Tip);
