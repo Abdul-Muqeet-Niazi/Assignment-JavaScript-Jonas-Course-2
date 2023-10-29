@@ -275,10 +275,10 @@ const friendzz = {
 console.log(friendzz);
 console.log(friendzz.Friends[0]);
 
-// (this) Property :
+// (this) Property : "it is the property, which is equal to the Object calling Method means 'This' is calling by Method(Function) to access the information(BirthYear) in present Object".
 const Friendz = {
     Name: 'Jonas',
-    BirthYear: '2006',
+    BirthYear: 2006,
     Friends: ['Michael', 'Simron', 'Elizabeth'],
     NoOfFriends: 3,
 
@@ -287,8 +287,75 @@ const Friendz = {
     //     return 2023 - BirthYear;        
     // }
 
-    Calculator: function (BirthYear) {
-        return 2023 - BirthYear;
+    Calculator: function () {       // Using This property we will get rid from writing multiple times as BirthYear.
+        return 2023 - this.BirthYear;
     }
 }
 // console.log(Friendz.Calculator(2006)); // Instead of writing multiple times in console as birth year we simply use "This" property.
+console.log(Friendz.Calculator()); // By using THIS we will get rid of writing birth year.
+
+// Now here we call the age multiple times, which violate the rules of DRY(Dont Repeat Yourself).Just like this ↙
+console.log(Friendz.Calculator());
+console.log(Friendz.Calculator());
+console.log(Friendz.Calculator());
+// It works the same but you know Violate the rules. Now here we use another trick;
+
+const Friend = {
+    Name: 'Jonas',
+    BirthYear: 2006,
+    Friends: ['Michael', 'Simron', 'Elizabeth'],
+    NoOfFriends: 3,
+
+    Calculator: function () {       // Using This property we will get rid from writing multiple times as BirthYear.
+        this.anotherAge = 2023 - this.BirthYear;
+        return this.anotherAge;
+    }
+}
+
+Friend.Calculator(); // Without this ← You cannot log the value of written below so it is must to print it; 
+console.log(Friend.anotherAge);
+
+// Challenge On a Live Video;
+
+const Test = {
+    Name: "Mickel",
+    BirthYear: 1998,
+    HasDriverLicense: false,
+
+    Condition: function () {
+        return `${this.Name} is ${2023 - this.BirthYear} years old teacher, and he has ${this.HasDriverLicense ? 'a' : 'no'} Driver License`
+    }
+}
+console.log(Test.Condition());
+
+// Challenge No. 3:
+
+const Mark = {
+    Name: "Mark Miller",
+    Mass: 78,
+    Height: 1.69,
+
+    calcBMI: function () {
+        const BMI = this.Mass / this.Height ** 2;
+        return BMI;
+    }
+}
+
+const John = {
+    Name: "John Smith",
+    Mass: 92,
+    Height: 1.95,
+
+    calcBMI: function () {
+        const BMI = this.Mass / (this.Height * this.Height);
+        return BMI;
+    }
+}
+
+if (John.calcBMI() > Mark.calcBMI()) {
+    console.log(`${John.Name} BMI (${John.calcBMI()}) is higher than Mark's (${Mark.calcBMI()})!`);
+}
+else {
+    console.log(`${Mark.Name} BMI (${Mark.calcBMI()}) is higher than Mark's (${John.calcBMI()})!`);
+}
+
