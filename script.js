@@ -13,7 +13,7 @@
 // Simply write the function variable(means wrote on right side of function ex 'logger ↓') and that opertion will be done.
 
 function logger() {
-    console.log (`My name is Abdul Muqeet`);
+    console.log(`My name is Abdul Muqeet`);
 }
 // if i have to write or call or run or invoke these 3 times simply type:
 
@@ -24,16 +24,16 @@ logger();
 
 // Basically the purpose of function is to return a value(add ingredients + cook food + result: Maggie):
 
-function appleMangoJuice (apple , mango) {        // appleMangoJuice is variable where in brackets are parameters (for simply gave values)
-    console.log(apple , mango);
+function appleMangoJuice(apple, mango) {        // appleMangoJuice is variable where in brackets are parameters (for simply gave values)
+    console.log(apple, mango);
     const juice = `This juice is made with ${apple} apples and ${mango} mangoes.`;
     return juice;
 }
 
 // And the function never returns the value either you console(call ex is below ↓) it. It only returns the value when you store in variable
-appleMangoJuice(2,4); // This will only show parameters value like 2,4 bcz we have console it in function.
+appleMangoJuice(2, 4); // This will only show parameters value like 2,4 bcz we have console it in function.
 
-const shake = appleMangoJuice(2,2); // Now this is again showing parameters i again say that it was console it in the function.
+const shake = appleMangoJuice(2, 2); // Now this is again showing parameters i again say that it was console it in the function.
 console.log(shake);
 
 // Not all the functions need to return values and need parameters
@@ -65,16 +65,16 @@ console.log(age2);
 
 // Arrow Function:
 // This is a type of function that comes in ES6 and it is more easy but may be compilcated in some times, and it is one line of code 
- 
-const calcAge3 = birthYear => 2023 - birthYear ; // Functon Arrow;
-const age3 = calcAge3 (2006);
+
+const calcAge3 = birthYear => 2023 - birthYear; // Functon Arrow;
+const age3 = calcAge3(2006);
 console.log(age3);
 
 // Now with Two or more lines of code function;
 const age4 = birthYear => {
     const calcAge4 = 2023 - birthYear;
     const userRetirement = 65 - calcAge4;
-    return(`You have ${userRetirement} Years left for Retirement`);
+    return (`You have ${userRetirement} Years left for Retirement`);
 }
 const age5 = age4(2006);
 console.log(age5);
@@ -83,9 +83,9 @@ console.log(age5);
 const age6 = (birthYear, Name) => {
     const calcAge5 = 2023 - birthYear;
     const userRetirement2 = 65 - calcAge5;
-    return(`${Name} have ${userRetirement2} Years left for Retirement`);
+    return (`${Name} have ${userRetirement2} Years left for Retirement`);
 }
-const age7 = age6(2006 , "Abdul Muqeet");
+const age7 = age6(2006, "Abdul Muqeet");
 console.log(age7);
 
 // In the End, I simply say that it is a litte bit hard so try to use the basic Function declaration as many developer use.
@@ -102,20 +102,20 @@ function juiceProcessor(Banana, Mango) {
     const mangoPieces = fruitPieces(Mango);
     return (`This shake is made with ${bananaPieces} pieces of Banana and ${mangoPieces} pieces of Mango.`)
 }
-console.log(juiceProcessor(2,2));
+console.log(juiceProcessor(2, 2));
 
 // Challenge No. 1:
 
-const calcAvg = (a , b , c) =>  (a + b + c) / 3;
-console.log(calcAvg(2,4,5));
+const calcAvg = (a, b, c) => (a + b + c) / 3;
+console.log(calcAvg(2, 4, 5));
 
-const avgDolphins = 23 + 34 + 30 / 3 ;
-const avgKoalas = 85 + 55 + 45 / 3 ;
+const avgDolphins = 23 + 34 + 30 / 3;
+const avgKoalas = 85 + 55 + 45 / 3;
 
 function checkWinner(avgDolphins, avgKoalas) {
     if (avgKoalas >= 2 * avgDolphins) {
         console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
-    } else if (avgDolphins >= 2 * avgKoalas){
+    } else if (avgDolphins >= 2 * avgKoalas) {
         console.log(`Dolphins win (${avgDolphins} vs ${avgKoalas})`);
     }
     else {
@@ -123,7 +123,7 @@ function checkWinner(avgDolphins, avgKoalas) {
     }
 }
 
-const winner = checkWinner(avgDolphins , avgKoalas);
+const winner = checkWinner(avgDolphins, avgKoalas);
 
 // Arrays :
 // Before starting we have to know about Mutable and Immutable : Mutability refers to data types that can be accessed and 
@@ -140,7 +140,7 @@ const friend1 = 'Khalid bin Waleed';
 const friend2 = 'Salah Uddin Ayubi';
 
 // Now for this purpose we use Array :
-const friends = ['Khalid bin Waleed' , 'Salah Uddin Ayubi' , 'Momin']; // Index starts from 0 & length starts from 1.
+const friends = ['Khalid bin Waleed', 'Salah Uddin Ayubi', 'Momin']; // Index starts from 0 & length starts from 1.
 console.log(friends);
 console.log(friends[0]);
 console.log(friends[1]);
@@ -153,12 +153,12 @@ friends[0] = 'Aqib'; // Now you might thinking that const cant be changed but ho
 console.log(friends);
 
 // You can also write array in another array, and do operation(only expression operation not statement operation like if/else etc):
-const arr = ['someone' , 'no-one' , 200-131 , Array = [5646, 5979], 'kick-start'];
+const arr = ['someone', 'no-one', 200 - 131, Array = [5646, 5979], 'kick-start'];
 console.log(arr);
 
 // Using a variable into an array:
 const firstName = "Abdul Muqeet";
-const array = [firstName , "Creative" , "Hard-Worker" , "Need-Worker"];
+const array = [firstName, "Creative", "Hard-Worker", "Need-Worker"];
 console.log(array.length); // Defines length
 console.log(array[array.length - 1]); // define "Need-Worker"
 console.log(array);
@@ -167,7 +167,7 @@ console.log(array);
 
 // Adding :
 // Push: It adds the element in the end !
-const friendz = ['Michael' , 'John' , 'Smith'];
+const friendz = ['Michael', 'John', 'Smith'];
 friendz.push('Fernandez');
 console.log(friendz);
 
@@ -189,7 +189,7 @@ console.log(friendz); // Remove Jacqueline.
 // indexof : showing index of an element !
 const index = friendz.indexOf('John'); // Returns value 1 bcz it is placed on index of 1
 const index2 = friendz.indexOf('Smith'); // Returns as value -1 which means false as indeed we have no index of Smith as it removes by pop.
-console.log(index); 
+console.log(index);
 console.log(index2);
 
 // includes : Showing boolean values(True and False) as it available or not : (Release in ES6)
@@ -211,8 +211,84 @@ function calcTip(billvalue) {
     }
 }
 
-const billvalue = [ 125 , 555 , 44 ,];
-const tip = [calcTip(billvalue[0]) , calcTip(billvalue[1]) , calcTip(billvalue[2])];
-const total_Bill_Value_With_Tip = [billvalue[0] + tip[0] , billvalue[1] + tip[1] , billvalue[2] + tip[2]];
-console.log(billvalue , tip);
+const billvalue = [125, 555, 44,];
+const tip = [calcTip(billvalue[0]), calcTip(billvalue[1]), calcTip(billvalue[2])];
+const total_Bill_Value_With_Tip = [billvalue[0] + tip[0], billvalue[1] + tip[1], billvalue[2] + tip[2]];
+console.log(billvalue, tip);
 console.log(total_Bill_Value_With_Tip);
+
+// Objects :
+// Now, the big difference between objects and arrays, is that in objects, the order of these values, does not matter at all when we want to retrieve them.
+// So in arrays, the order in which we specify the elements matters a lot because that's how we access these elements, right?
+// So we can only access array elements using their order number. (which is index as [0,1,2,3 etc])
+
+// Left hand side define as (Key) and right hand side define as (value):
+
+const obj = {                     // Object Sign is: Starts from Curly Brackets
+    Name: "Abdul Muqeet",
+    Course: "Programming",
+    Duration: "9 Months",
+    Age: 2023 - 2006,              // Also can do mathematical operation in value. Where (Age) is key.
+    Desire: ["Become as Khalid Bin Waleed"] // You can also write array data into it. Sign of Array is Square Bracket [] .
+}  // The whole bracket is called properties.
+
+console.log(obj);
+
+// Object Dot vs Bracket Notations :
+
+const valuez = obj.Name; // Dot value retrieve the data from obj in console.
+console.log(valuez);
+
+const anotherValue = obj['Name']; // Bracket value also retrieve the data from obj but in string otherwise gave error.
+console.log(anotherValue);
+// OR
+const anotherTrick = 'ation';
+console.log(obj['Dur' + anotherTrick]); // JavaScript is so smart it also retrieve data in order with concating a word then send the data.
+// This trick is failed in dot expression.
+
+// Then What we choose to retrieve data ?
+
+const questionAboutMe = prompt(`What do you know about Abdul-Muqeet, Choose your answer in Name, Course, Duration, Age, Desire`);
+// console.log(questionAboutMe); // Now it only prints the key not value.
+// console.log(obj.questionAboutMe); // Now here it gives you undefined bcz of it search for the property in (obj) as there is no property as name of questionAboutMe.
+// so now here we use bracket notation instead of dot notation.
+console.log(obj[questionAboutMe]);
+
+if (obj[questionAboutMe]) {
+    console.log(obj[questionAboutMe]);
+} else {
+    console.log(`Wrong request! , Choose your answer in Name, Course, Duration, Age, Desire`);
+}
+
+// You can also insert or produce value in the obj as separate;
+obj.location = 'Karachi, Sindh, Pakistan';
+obj['Facebook'] = 'Abdul-Muqeet';
+console.log(obj);
+
+// Challenge Live on Video;
+const friendzz = {
+    Name: 'Jonas',
+    BirthYear: '2006',
+    Friends: ['Michael', 'Simron', 'Elizabeth'],
+    NoOfFriends: 3,
+}
+console.log(friendzz);
+console.log(friendzz.Friends[0]);
+
+// (this) Property :
+const Friendz = {
+    Name: 'Jonas',
+    BirthYear: '2006',
+    Friends: ['Michael', 'Simron', 'Elizabeth'],
+    NoOfFriends: 3,
+
+    // Any functoin that is attached to a function is called "METHOD".
+    // Calculator: function (BirthYear) {   
+    //     return 2023 - BirthYear;        
+    // }
+
+    Calculator: function (BirthYear) {
+        return 2023 - BirthYear;
+    }
+}
+// console.log(Friendz.Calculator(2006)); // Instead of writing multiple times in console as birth year we simply use "This" property.
