@@ -359,3 +359,61 @@ else {
     console.log(`${Mark.Name} BMI (${Mark.calcBMI()}) is higher than Mark's (${John.calcBMI()})!`);
 }
 
+// FOR LOOP:
+
+
+const loopArray = ["Abdul-Muqeet", 17, 2006, "Karachi"];
+const emptyArray = [];
+
+console.log("------------------ Array Loop ------------------");
+
+for (let i = 0; i < array.length; i++) {
+    // Reading The Array:
+    console.log(loopArray[i]);
+
+    // Filling The Array:
+    // emptyArray[i] = typeof loopArray[i]; // OR
+    emptyArray.push(typeof loopArray[i]);   // This is a perfect statement for filling the loop
+}
+console.log(emptyArray);
+
+// Exercise:
+const Year = [1990, 2005, 2007, 2010];
+const ageCalculator = [];
+
+for (let index = 0; index < array.length; index++) {
+    ageCalculator.push(2023 - Year[index]);
+}
+console.log(ageCalculator);
+
+// Continue And Break in the FOR LOOP:
+
+for (let index = 0; index < array.length; index++) { 
+    if (typeof loopArray[index] !== 'string') continue;     //  Continue doesn't terminate the next iterations; it resumes with the successive iterations.
+        console.log(loopArray[index], typeof loopArray[index]);
+}
+
+for (let index = 0; index < array.length; index++) {
+    if (typeof Year[index] === 'string') break;       // Break statement stops the entire process of the loop when it recieve the true property. 
+    console.log(Year[index], typeof Year[index]);        
+}
+     
+// Backward FOR LOOP:
+
+console.log("--------------- Backward Loop ---------------");
+
+for (let index = loopArray.length - 1; index >= 0; index--) {
+    console.log(index, loopArray[index]);
+}
+
+// For Loop Inside Another For Loop:
+
+console.log("--------------- Loop Inside Another Loop ---------------");
+
+for (let i = 0; i < 5; i++) {
+    console.log(`Lifting Weight Repetition ${i}`);
+    
+    for (let i = 0; i < 4; i++) {
+        console.log(`Another Lifting Weight Repetition ${i}`); 
+    }
+}
