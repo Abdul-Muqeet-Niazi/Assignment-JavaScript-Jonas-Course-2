@@ -417,3 +417,75 @@ for (let i = 0; i < 5; i++) {
         console.log(`Another Lifting Weight Repetition ${i}`); 
     }
 }
+
+// While Loop: 
+// Where While loop only required Condition.
+// It's suitable when you want to repeat an action based on a condition and you're not sure how many times it needs to be repeated in advance.
+
+console.log("--------------- While Loop ---------------");
+
+let i = 1; 
+while (i <= 6) {
+    console.log(`Yeah you have found the number!`);
+    i++;
+}
+
+// ====================================================================================================== //
+
+let loopWhile = Math.trunc(Math.random() * 6) + 1;
+// What is going on the above Statement ?
+
+// Math.random() generates a random decimal (like 0.539471085089558) between 0 and 1.
+// Multiplying by 6 (Math.random() * 6) changes the range to a random decimal number between 0 and 6 (for example, 3.254782320537848).
+// Math.trunc() removes the decimal part, leaving you with a whole number (e.g., 3).
+// Adding 1 to this result (Math.trunc(Math.random() * 6) + 1) shifts the range to be between 1 and 6 (for example, 3 becomes 4, 0 becomes 1, and 5 becomes 6). 
+
+while (loopWhile !== 6) {
+    console.log(`You have roll the dice of ${loopWhile}`);
+    loopWhile = Math.trunc(Math.random() * 6) + 1;
+    if (loopWhile === 6 ) {
+        console.log(`Yeh! you reached again at 6, Now loop will END!`);
+    }
+}
+
+// Differnce between While and For loop ?
+// => While loops are more flexible, ideal when the number of iterations is unknown and based on a condition.
+// => For loops are useful when the number of iterations is definite and you know the start, end, and increment logic beforehand.
+
+// Challenge NO. 04:
+
+const bills = [ 22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tips = [];
+const totals = [];
+
+function calcTip(bills) {
+    if (bills >= 50 && bills <= 300) {
+        return bills * 0.15;
+    } else {
+        return bills * 0.2;
+    }
+}
+
+for (let i = 0; i < bills.length; i++) {
+    const tip = calcTip(bills[i]);
+    tips.push(tip);
+    totals.push(tip + bills[i]); 
+}
+console.log(bills);
+console.log(tips);
+console.log(totals);
+
+// ================================================================================================= //
+
+const calcAverage = function (arr) {
+    let sum = 0;
+    for (let i = 0; i < arr.length; i++) {
+        sum += arr[i];
+    }
+    return sum/arr.length;
+}
+console.log(calcAverage(totals));
+console.log(calcAverage(tips));
+console.log(calcAverage(bills));
+
+// =========================================== JavaScript Fundamental Part 2 Complete ====================================================== //
